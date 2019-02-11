@@ -192,6 +192,7 @@ throwable error."
         (keyword? t) 6
         ;; TODO use boolean? when datahike is on 1.9+
         (or (true? t) (false? t)) 7
+        (uuid? t) 8
 
         (nil? t) 10000
         :else (throw (ex-info (str "Type not supported:" (type t))
